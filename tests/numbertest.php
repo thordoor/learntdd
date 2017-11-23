@@ -1,11 +1,25 @@
 <?php
 use PHPUnit\Framework\TestCase;
+require "app/fractions.php";
 
-class NumberTest extends TestCase
+class FractionsTest extends TestCase
 {
-    public function testAddNumbers()
+    private $fraction;
+
+    protected function setup()
     {
-        $this->assertEquals(1+1, 1+2);
+        $this->fraction = new Fractions();
+    }
+
+    protected function tearDown()
+    {
+        $this->calculator = NULL;
+    }
+
+    public function testAddfractions()
+    {
+        $result = $this->fraction->addFractions(0, 0);
+        $this->assertEquals(0, $result);
     }
 }
 ?>
