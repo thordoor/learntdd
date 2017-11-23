@@ -16,16 +16,16 @@ class FractionsTest extends TestCase
         $this->calculator = NULL;
     }
 
-    public function testAddfractions()
+    public function testAddFractions()
     {
-        $result = $this->fraction->addFractions(0, 0);
-        $this->assertEquals(0, $result);
+        $result = $this->fraction->addFractions(2, 1);
+        $this->assertEquals('3/1', $result);
     }
 
     public function testConvertToFraction()
     {
-        $result = $this->fraction->convertToFraction(3,10);
-        $this->assertEquals([(3/1), (10/1)], $result);
+        $result = $this->fraction->convertToFraction(5);
+        $this->assertEquals('5/1', $result);
     }
 }
 ?>

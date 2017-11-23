@@ -1,20 +1,18 @@
 <?php
 
 class Fractions
-{
+{    
     public function addFractions($a, $b)
     {
-        if (!preg_match('/\/', $a)) {
-            convertToFraction();
+        $result = $a + $b;
+        if (!preg_match('/\//', $result)) {
+            $result = $this->convertToFraction($result);
         }
-        return $a + $b;
+        return $result;
     }
 
-    public function convertToFraction($a, $b)
+    public function convertToFraction($num)
     {
-        $resultArray = [];
-        $resultArray[0] = ($a/1);
-        $resultArray[0] = ($b/1);
-        return $resultArray;
+        return ($num . '/1');
     }
 }
