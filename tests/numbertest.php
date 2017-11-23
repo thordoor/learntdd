@@ -21,5 +21,11 @@ class FractionsTest extends TestCase
         $result = $this->fraction->addFractions(0, 0);
         $this->assertEquals(0, $result);
     }
+
+    public function testConvertToFraction()
+    {
+        $result = $this->fraction->convertToFraction(3,10);
+        $this->assertEquals([(3/1), (10/1)], $result);
+    }
 }
 ?>
