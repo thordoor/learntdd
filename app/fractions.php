@@ -4,13 +4,17 @@ class Fractions
 {
     public function addFractions($a, $b)
     {
-        convertToFraction();
-
+        if (!preg_match('/\/', $a)) {
+            convertToFraction();
+        }
         return $a + $b;
     }
 
-    public function convertToFraction()
+    public function convertToFraction($a, $b)
     {
-        return;
+        $resultArray = [];
+        $resultArray[0] = ($a/1);
+        $resultArray[0] = ($b/1);
+        return $resultArray;
     }
 }
