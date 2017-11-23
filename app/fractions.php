@@ -24,6 +24,8 @@ class Fractions
         $nominator = $num * $numberOfDecimals * 10;
         $denominator = $numberOfDecimals * 10;
         $fraction = $nominator . '/' . $denominator;
+        $gcd = gmp_gcd($nominator, $denominator);
+        $fraction = $nominator/$gcd . '/' . $denominator/$gcd;
         return $fraction;
     }
 }

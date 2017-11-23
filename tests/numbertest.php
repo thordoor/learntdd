@@ -18,8 +18,8 @@ class FractionsTest extends TestCase
 
     public function testAddFractions()
     {
-        $result = $this->fraction->addFractions(1/3, 1/3);
-        $this->assertEquals(2/3, $result);
+        $result = $this->fraction->addFractions(3/4, 3/4);
+        $this->assertEquals('15/10', $result);
     }
 
     public function testConvertToFractionIfRealNumber()
@@ -30,8 +30,8 @@ class FractionsTest extends TestCase
 
     public function testConvertToFraction()
     {
-        $result = $this->fraction->convertToFraction(1.235);
-        $this->assertEquals(3, $result);
+        $result = $this->fraction->convertToFraction(1.5);
+        $this->assertEquals('15/10', $result);
     }
 }
 ?>
