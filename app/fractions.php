@@ -2,9 +2,13 @@
 
 class Fractions
 {   //ADD FRACTIONS
-    public function addFractions($a, $b)
+    public function addFractions($numArray)
     {
-        $result = $a + $b;
+        $result = 0;
+        for ($i=0; $i < count($numArray); $i++) { 
+            $result += $numArray[$i];
+        }
+        
         $result = $this->convertToFractionAndCalculate($result);
         return $result;
     }
@@ -34,9 +38,17 @@ class Fractions
     }
 
     //Multiply fractions
-    public function multiplyFractions($a, $b)
+    public function multiplyFractions($numArray)
     {
-        $result = $a * $b;
+        $result = 0;
+        for ($i=0; $i < count($numArray); $i++) {
+            if($result == 0){
+                $result = $numArray[$i];
+            }
+            else{
+                $result *= $numArray[$i];
+            }
+        }
         $result = $this->convertToFractionAndCalculate($result);
         return $result;
     }

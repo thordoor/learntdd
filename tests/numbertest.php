@@ -19,8 +19,8 @@ class FractionsTest extends TestCase
     //ADD FRACTIONS
     public function testAddFractions()
     {
-        $result = $this->fraction->addFractions(3/4, 3/4);
-        $this->assertEquals('3/2', $result);
+        $result = $this->fraction->addFractions([3/4, 3/4, 3/4]);
+        $this->assertEquals('9/4', $result);
     }
 
     public function testConvertToFractionIfInteger()
@@ -38,8 +38,8 @@ class FractionsTest extends TestCase
     //MULTIPLY FRACTIONS
     public function testMultiplyFractions()
     {
-        $result = $this->fraction->multiplyFractions(6/4, 1/7);
-        $this->assertEquals('3/14', $result);
+        $result = $this->fraction->multiplyFractions([14/2, 1/7, 5/3]);
+        $this->assertEquals('2/1', $result);
     }
 }
 ?>
