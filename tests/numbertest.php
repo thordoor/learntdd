@@ -38,8 +38,17 @@ class FractionsTest extends TestCase
     //MULTIPLY FRACTIONS
     public function testMultiplyFractions()
     {
-        $result = $this->fraction->multiplyFractions([14/2, 1/7, 5/3]);
-        $this->assertEquals('2/1', $result);
+        $result = $this->fraction->multiplyFractions([1/2, 1/2, 1/2]);
+        $this->assertEquals('1/8', $result);
     }
+
+    //SUBTRACT FRACTIONS
+    public function testSubtractFractions()
+    {
+        $result = $this->fraction->subtractFractions([1, 3/4]);
+        $this->assertEquals('1/4', $result);
+    }
+
+    //DIVIDE FUNCTION
 }
 ?>
