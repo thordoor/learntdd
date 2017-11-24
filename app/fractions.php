@@ -68,4 +68,20 @@ class Fractions
         $result = $this->convertToFractionAndCalculate($result);
         return $result;
     }
+
+    //DIVIDE FRACTIONS
+    public function divideFractions($numArray)
+    {
+        $result = 0;
+        for ($i=0; $i < count($numArray); $i++) { 
+            if($result == 0){
+                $result = $numArray[$i];
+            }
+            else{
+                $result /= $numArray[$i];
+            }
+        }
+        $result = $this->convertToFractionAndCalculate($result);
+        return $result;
+    }
 }
