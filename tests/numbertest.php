@@ -16,9 +16,10 @@ class FractionsTest extends TestCase
         $this->calculator = NULL;
     }
 
+    //ADD FRACTIONS
     public function testAddFractions()
     {
-        $result = $this->fraction->addFractions(1/1, 1/2);
+        $result = $this->fraction->addFractions(3/4, 3/4);
         $this->assertEquals('3/2', $result);
     }
 
@@ -30,8 +31,15 @@ class FractionsTest extends TestCase
 
     public function testConvertToFractionAndCalculate()
     {
-        $result = $this->fraction->convertToFractionAndCalculate(5.0);
-        $this->assertEquals('5/1', $result);
+        $result = $this->fraction->convertToFractionAndCalculate(5.5123);
+        $this->assertEquals('11/2', $result);
+    }
+
+    //MULTIPLY FRACTIONS
+    public function testMultiplyFractions()
+    {
+        $result = $this->fraction->multiplyFractions(6/4, 1/7);
+        $this->assertEquals('3/14', $result);
     }
 }
 ?>

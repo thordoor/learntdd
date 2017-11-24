@@ -1,7 +1,7 @@
 <?php
 
 class Fractions
-{    
+{   //ADD FRACTIONS
     public function addFractions($a, $b)
     {
         $result = $a + $b;
@@ -31,5 +31,13 @@ class Fractions
         $fraction = (int)$nominator/$gcd . '/' . (int)$denominator/$gcd;
         $this->convertToFractionIfInteger($fraction);
         return (string)$fraction;
+    }
+
+    //Multiply fractions
+    public function multiplyFractions($a, $b)
+    {
+        $result = $a * $b;
+        $result = $this->convertToFractionAndCalculate($result);
+        return $result;
     }
 }
